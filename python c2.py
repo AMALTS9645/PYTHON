@@ -33,6 +33,33 @@ list_of_leap_years=find_leap_years(2000)
 
 print(list_of_leap_years)
 
+"""**program 3**
+
+1.Generate positive list of numbers from a given list of integers
+"""
+
+NumList = []
+
+Number = int(input("Please enter the Total Number of List Elements: "))
+for i in range(1, Number + 1):
+    value = int(input("Please enter the Value of %d Element : " %i))
+    NumList.append(value)
+
+print("\nPositive Numbers in this List are : ")
+for j in range(Number):
+    if(NumList[j] >= 0):
+        print(NumList[j], end = '   ')
+
+"""3.Form a list of vowels selected from a given word"""
+
+element = input("Enter any statement : ")
+vowels =['a','e','i','o','u']
+list1=[]
+for x in element:
+    if (x in vowels and x not in list1):
+        list1.append(x)
+print("Vowels present in given statement : ",list1)
+
 """**program4**"""
 
 def word_count(str):
@@ -48,3 +75,78 @@ def word_count(str):
     return counts
 
 print( word_count('the quick brown fox jumps over the lazy dog.'))
+
+"""**program 8**"""
+
+lis = []
+s=input("Enter String")
+for ch in s:
+    if ch in lis:
+        lis.append('$')
+    else:
+        lis.append (ch)
+print(''.join(str(i) for i in lis))
+
+"""**program 10**"""
+
+PI = 3.14
+radius = float(input(' Please Enter the radius of a circle: '))
+area = PI * radius * radius
+
+print(" Area Of a Circle = %.2f" %area)
+
+"""**program11**"""
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+ 
+if (num1 > num2) and (num1 > num3):
+   largest = num1
+elif (num2 > num1) and (num2 > num3):
+   largest = num2
+else:
+   largest = num3
+ 
+print("The largest number is",largest)
+
+"""**program12**"""
+
+n=int(input("Enter a number n: "))
+temp=str(n)
+t1=temp+temp
+t2=temp+temp+temp
+comp=n+int(t1)+int(t2)
+print("The value is:",comp)
+
+"""**program 16**"""
+
+first_string = input()
+second_string = input()
+
+swap_string = second_string + ' ' + first_string
+print(swap_string)
+
+"""**program 18**"""
+
+def Merge(dict1, dict2):
+    return(dict2.update(dict1))
+     
+
+dict1 = {'a': 10, 'b': 8}
+dict2 = {'d': 6, 'c': 4}
+
+print(Merge(dict1, dict2))
+
+print(dict2)
+
+"""**program 19**"""
+
+num1 = int(input("Enter 1st number: "))
+num2 = int(input("Enter 2nd number: "))
+i = 1
+while(i <= num1 and i <= num2):
+  if(num1 % i == 0 and num2 % i == 0):
+    gcd = i
+  i = i + 1
+print("GCD is", gcd)
