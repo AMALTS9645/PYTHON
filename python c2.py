@@ -7,35 +7,19 @@ Original file is located at
     https://colab.research.google.com/drive/1MfxEJLLLLEBheH1Vpv4H1TVMH7Nnm8Z8
 
 **program 2**
+
+Display future leap years from current year to a final year entered by user.
 """
 
-def find_leap_years(given_year):
-
-   count=0
-
-   list_of_leap_years=[]
-
-       
-
-   while(count<15):
-
-       if(given_year%4==0 or given_year%400==0 and given_year%100==0):
-
-           list_of_leap_years.append(given_year)
-
-           count=count+1
-
-       given_year=given_year+1
-
-   return list_of_leap_years
-
-list_of_leap_years=find_leap_years(2000)
-
-print(list_of_leap_years)
+y = int (input("Enter the final year:"))
+print("Future leap years from 2021:")
+for x in range(2021 , y+10):
+ if(x%4==0) and (x%100!=0) or (x%400==0):
+    print(x)
 
 """**program 3**
 
-1.Generate positive list of numbers from a given list of integers
+a.Generate positive list of numbers from a given list of integers
 """
 
 NumList = []
@@ -50,7 +34,15 @@ for j in range(Number):
     if(NumList[j] >= 0):
         print(NumList[j], end = '   ')
 
-"""3.Form a list of vowels selected from a given word"""
+"""b.Square of N numbers"""
+
+numbers = [1, 2, 3, 4, 5]
+
+squared_numbers = [number ** 2 for number in numbers]
+
+print(squared_numbers)
+
+"""c.Form a list of vowels selected from a given word"""
 
 element = input("Enter any statement : ")
 vowels =['a','e','i','o','u']
@@ -76,6 +68,76 @@ def word_count(str):
 
 print( word_count('the quick brown fox jumps over the lazy dog.'))
 
+"""**program 5**"""
+
+x = []
+n = int(input("enter any integers:")) 
+for i in range(1, n+1):
+    a = int[n]
+  if (a>100):
+    x.append('over')
+  else:
+     x.append(a)
+print("modified list:", x)
+
+"""**program 6**"""
+
+name = input("enter the name")
+list = []
+count = 0
+for x in name:
+   list.append(x)
+   if (x in name and x == 'a'):
+      count = count + 1
+print(count)
+
+"""**program 7**
+
+a
+"""
+
+list1 = [1, 2, 4, 3, 8]
+list2 = [1, 2, 4, 3, 5]
+print ("the first list is :" + str(list1))
+print ("the second list is :" + str(list2))
+l1 = len(list1)
+l2 = len(list2)
+print("length of list1 :", l1 , "and length of list2 :", l2)
+if l1 == l2:
+   print ("list are same length")
+else :
+    print ("list are of different length")
+
+"""b"""
+
+list1 = [1, 2, 4, 3, 8]
+list2 = [1, 2, 4, 3, 5]
+print ("the first list is :" + str(list1))
+print ("the second list is :" + str(list2))
+sum1 = 0
+sum2 = 0
+for x in range(0, len(list1)):
+    sum1 = sum1 + list1[x]
+print ("sum of all elements in given list1 :", sum1)
+for x in range(0, len(list2)):
+   sum2 = sum2 + list2[x]   
+print ("sum of all elements in given list2 :", sum2)
+if ( sum1 == sum2):
+   print ("list sum to same value") 
+else:
+   print("list are of different sum")
+
+"""c"""
+
+list1 = [1, 2, 4, 3, 8]
+list2 = [1, 2, 4, 3, 5]
+print ("the first  list is :" + str(list1))
+print ("the second list is :" + str(list2))
+print ("the values occur in both lists :")
+for x in list1:
+   if(x in list1 and x in list2):
+      print(x)
+
 """**program 8**"""
 
 lis = []
@@ -86,6 +148,12 @@ for ch in s:
     else:
         lis.append (ch)
 print(''.join(str(i) for i in lis))
+
+"""**program 9**"""
+
+a = input("enter a string")
+print("\nnew string :")
+print(a[-1:] + a[1:-1] + a[0])
 
 """**program 10**"""
 
@@ -119,6 +187,25 @@ t2=temp+temp+temp
 comp=n+int(t1)+int(t2)
 print("The value is:",comp)
 
+"""**program 13**"""
+
+color_list = ["Red","Green","White" ,"Black"]
+print( "%s %s"%(color_list[0],color_list[3]))
+
+"""**program 14**"""
+
+a = int(input("Input an integer : "))
+n1 = int( "%s" % a )
+n2 = int( "%s%s" % (a,a) )
+n3 = int( "%s%s%s" % (a,a,a) )
+print (n1+n2+n3)
+
+"""**program 15**"""
+
+color_list_1 = set(["White", "Black", "Red"])
+color_list_2 = set(["Red", "Green"])
+print(color_list_1.difference(color_list_2))
+
 """**program 16**"""
 
 first_string = input()
@@ -126,6 +213,16 @@ second_string = input()
 
 swap_string = second_string + ' ' + first_string
 print(swap_string)
+
+"""**program 17**"""
+
+d = { 5: 1 , 4: 2 , 3: 3 , 2: 4 , 1: 5 }
+ 
+print("The original dictionary: ", d)
+ 
+a = dict(sorted(d.items(), key=lambda x: x[0]))
+ 
+print("After sorting by key: ", a)
 
 """**program 18**"""
 
@@ -150,3 +247,12 @@ while(i <= num1 and i <= num2):
     gcd = i
   i = i + 1
 print("GCD is", gcd)
+
+"""**program 20**"""
+
+list = [11, 22, 33, 44, 55]
+print("Original list :",list)
+for i in list:
+   if(i%2 == 0):
+      list.remove(i)
+print("List after removing Even numbers : ", list)
