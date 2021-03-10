@@ -33,7 +33,7 @@ print("Area of first rectangle:", obj.area())
 print("area of second rectangle:", obj1.area1())
 
 print("perimeter of first rectangle:", obj.perimeter())
-print("perimeter of second rectangle:", obj1.perimeter())
+print("perimeter of second rectangle:", obj1.perimeter1())
 
 p = obj.area()
 q = obj1.area1()
