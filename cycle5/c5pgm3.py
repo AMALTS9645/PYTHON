@@ -1,0 +1,5 @@
+f = open("C:/Users/student.MCALAB/Desktop/20mca011/PYTHON/cycle5/pgm5.csv", 'r')
+f_contents = f.readlines()
+list1 = list(f_contents)
+print(list1)
+f.close()
